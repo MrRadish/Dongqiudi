@@ -17,6 +17,10 @@ public class CircleFragmentAdapter extends FragmentPagerAdapter {
     public CircleFragmentAdapter(FragmentManager fm, List<Fragment> list) {
         super(fm);
 
+
+
+
+
         this.list = list;
     }
 
@@ -28,5 +32,6 @@ public class CircleFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return list.size();
+
     }
 }
