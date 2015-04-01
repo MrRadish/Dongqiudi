@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 首页底部导航 -->
+    <string name="app_name">Dongqiudi</string>
+    <string name="title">懂球帝</string>
+    <string name="action_settings">Settings</string>
+    <string name="btm_main">首页</string>
+    <string name="btm_game">比赛</string>
+    <string name="btm_people">圈子</string>
+    <string name="btm_data">数据</string>
+    <!---->
+    <string-array name="game_detail_title">
+        <item>聊天</item>
+        <item>事件</item>
+        <item>阵容</item>
+        <item>战报</item>
+        <item>直播</item>
+    </string-array>
+    <!-- 首页顶部导航 -->
+    <string name="main_name">头条</string>
+    <string name="video">视频</string>
+    <string name="collection">集锦</string>
+    <string name="depth">深度</string>
+    <string name="subject">专题</string>
+    <string name="topic">话题</string>
+    <string name="footballer">球员</string>
+    <string name="xianqing">闲情</string>
+    <string name="zhongchao">中超</string>
+    <string name="zhongjia">中甲</string>
+    <string name="epl">英超</string>
+    <string name="yijia">意甲</string>
+    <string name="xijia">西甲</string>
+    <string name="dejia">德甲</string>
+    <string name="wuzhou">五洲</string>
+    <string name="zhuanhui">转会</string>
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新...</string>
+    <string name="pull_to_refresh_release_label">释放以刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">点击刷新...</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_first_incoming">FirstIncomingActivity</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_incomin">IncominActivity</string>
+    <string name="title_activity_copy_right_acvity">CopyRightAcvity</string>
+    <string name="title_activity_tickling">TicklingActivity</string>
+    <string name="title_activity_article_view">ArticleViewActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- 数据页面 -->
+    <string name="data_zc">中超</string>
+    <string name="data_yc">英超</string>
+    <string name="data_yj">意甲</string>
+    <string name="data_xj">西甲</string>
+    <string name="data_dj">德甲</string>
+    <string name="data_og">欧冠</string>
+    <string name="data_yag">亚冠</string>
+    <string name="data_zj">中甲</string>
+    <string name="data_ol">欧联</string>
+    <string name="data_oys">欧预赛</string>
+    <string name="data_fj">法甲</string>
+    <string name="data_yzb">亚洲杯</string>
+    <string name="data_fzb">非洲杯</string>
+    <string name="data_sjb">世界杯</string>
+    <string name="data_tc">土超</string>
+    <string name="data_ec">俄超</string>
+    <string name="data_hj">荷甲</string>
+    <string name="data_pc">葡超</string>
+    <string name="data_jifeng">积分</string>
+    <string name="data_sheshou">射手</string>
+    <string name="data_zhugong">助攻</string>
+    <string name="data_shuaicheng">赛程</string>
+    <string name="data_qiudui">球队</string>
+    <string name="data_chang">场</string>
+    <string name="data_sheng">胜</string>
+    <string name="data_fu">负</string>
+    <string name="data_ping">平</string>
+    <string name="data_jin">进/失</string>
+    <string name="data_qiuyuan">球员</string>
+    <string name="data_jinqiu">进球</string>
+    <string name="data_secondarynum">助攻次数</string>
+    <string name="data_before">上一轮</string>
+    <string name="data_next">下一轮</string>
+    <string name="data_ranking">第0轮</string>
+    <string name="title_activity_data_team">DataTeamActivity</string>
+    <string name="title_activity_member">MemberActivity</string>
+</resources>

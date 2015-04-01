@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/game_field"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/game_field" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#88333333"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="比赛"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            android:gravity="right"
+            android:src="@drawable/star" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/game_field_group"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/game_field"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/game_field1"
+            style="@style/game_detail_title"
+            android:text="按钮" />
+
+        <RadioButton
+            android:id="@+id/game_field2"
+            style="@style/game_detail_title"
+            android:text="按钮" />
+
+        <RadioButton
+            android:id="@+id/game_field3"
+            style="@style/game_detail_title"
+            android:text="按钮" />
+
+        <RadioButton
+            android:id="@+id/game_field4"
+            style="@style/game_detail_title"
+            android:text="按钮" />
+
+        <RadioButton
+            android:id="@+id/game_field5"
+            style="@style/game_detail_title"
+            android:text="按钮" />
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/game_field_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/game_field_group"></android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/gamedetail_one_left"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/hanguo"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"></ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/team_icon_shadow"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@+id/gamedetail_one_left"
+        android:layout_alignRight="@+id/gamedetail_one_left"
+        android:layout_alignEnd="@+id/gamedetail_one_left"
+        android:id="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/gamedetail_one_right"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/hanguo"
+        android:layout_alignTop="@+id/gamedetail_one_left"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"></ImageView>
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/team_icon_shadow"
+    android:layout_marginRight="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_below="@+id/gamedetail_one_right"
+    android:layout_alignRight="@+id/gamedetail_one_right"
+    android:layout_alignEnd="@+id/gamedetail_one_right"
+        android:id="@+id/imageView2" />
+
+    <LinearLayout
+        android:id="@+id/gamedetail_one_textLinear"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/gamedetail_one_date_utc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/gamedetail_one_score"
+            android:layout_width="75dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:text="0 - 2"/>
+
+        <TextView
+            android:id="@+id/gamedetail_one_competition_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:text="友谊赛"/>
+        </LinearLayout>
+</RelativeLayout>

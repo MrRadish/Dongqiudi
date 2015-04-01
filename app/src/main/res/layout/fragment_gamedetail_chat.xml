@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ds.fragment.GameDetailFragment_chat"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/Chat_ListView"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="#fff"
+    android:layout_weight="1">
+    <TextView
+        android:id="@+id/Chat_TextView"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="聊天室维护中"/>
+</LinearLayout>
+
+
+
+</LinearLayout>

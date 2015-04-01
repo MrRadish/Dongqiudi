@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Chat_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/hanguo"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+ />
+
+    <TextView
+        android:id="@+id/Chat_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="5dp"
+        android:text="无名"
+        android:textColor="#666"
+        android:layout_alignTop="@+id/Chat_avatar"
+        android:layout_toRightOf="@+id/Chat_avatar"
+        android:layout_toEndOf="@+id/Chat_avatar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/Chat_message"
+        android:gravity="center"
+        android:background="#fff"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你看不见这里的"
+        android:layout_alignBottom="@+id/Chat_avatar"
+        android:layout_alignLeft="@+id/Chat_username"
+        android:layout_alignStart="@+id/Chat_username" />
+
+</RelativeLayout>

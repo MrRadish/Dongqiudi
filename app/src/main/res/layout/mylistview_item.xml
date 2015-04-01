@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:id="@+id/mylistview_item_left"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/mylistview_item_left_image"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:src="@drawable/hanguo"
+            />
+
+        <TextView
+            android:id="@+id/team_A_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="某个国家"/>
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mylistview_item_centre"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/date_utc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是开始时间和比赛"
+            android:textColor="#999"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/Fs"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="5 - 1"/>
+        <ImageView
+            android:id="@+id/fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/fav_collect"/>
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mylistview_item_right"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/mylistview_item_right_image"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:src="@drawable/hanguo"
+            />
+
+        <TextView
+            android:id="@+id/team_B_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="某个国家"/>
+
+    </LinearLayout>
+</LinearLayout>

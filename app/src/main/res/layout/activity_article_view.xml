@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.ds.dongqiudi.ArticleViewActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/top_bg"
+        android:id="@+id/linearLayout">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_weight="1"
+            android:src="@drawable/back_bg_btn"
+            android:layout_gravity="center"
+
+            />
+        <TextView
+            android:id="@+id/article_txt_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:text="@string/title"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="#FFF"
+            />
+    </LinearLayout>
+    <WebView
+        android:id="@+id/article_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_below="@+id/linearLayout"/>
+
+</LinearLayout>

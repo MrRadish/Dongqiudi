@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Top_rd_group">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/btm_txt_cl_color</item>
+        <item name="android:background">@drawable/main_fragment_top_bg</item>
+    </style>
+    <style name="Bottom_rd">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <!--<item name="android:background"></item>-->
+    </style>
+    <style name="game_detail_title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/radio_titles</item>
+        <item name="android:button">@null</item>
+    </style>
+    <style name="bottom_img">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!-- Circle里的上面两个radiobutton的样式
+  -->
+    <style name="Circle_RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/circle_title</item>
+        <item name="android:textColor">@drawable/textcolor</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <!--数据-->
+    <style name="data_rb_top">
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@drawable/btm_txt_cl_color</item>
+        <item name="android:background">@drawable/button_underscore</item>
+    </style>
+</resources>

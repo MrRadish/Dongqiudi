@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ds.dongqiudi.TeamActivity"
+    android:orientation="vertical">
+
+<TextView
+    android:gravity="center"
+    android:background="#ff00a500"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:textColor="#fff"
+    android:textSize="30sp"
+    android:text="@string/data_qiudui"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_img_log"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:id="@+id/team_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/team_img_log"
+            android:paddingRight="10dp"
+            />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_alignBottom="@+id/team_text_name"
+            android:layout_toRightOf="@+id/team_text_name"
+            />
+        <TextView
+            android:id="@+id/team_text_spelling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/team_text_name"
+
+            />
+        <TextView
+            android:id="@+id/team_button_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/team_text_name"
+            android:layout_alignBottom="@+id/team_img_log"
+            android:clickable="true"
+            >
+            </TextView>
+
+    </RelativeLayout>
+
+<RadioGroup
+    android:id="@+id/team_rg"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_team_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        >
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

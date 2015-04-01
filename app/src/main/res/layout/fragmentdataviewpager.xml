@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+<RadioGroup
+    android:background="@drawable/data_child_border_bg"
+        android:id="@+id/data_rg_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/data_view_jifeng"
+            android:background="@drawable/fragment_data_viewpage_rb"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/data_jifeng"
+            android:button="@null"
+            android:textColor="#fff"/>
+        <RadioButton
+            android:id="@+id/data_view_sheshou"
+            android:background="@drawable/fragment_data_viewpage_rb"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/data_sheshou"
+            android:button="@null"
+            android:textColor="#fff"/>
+        <RadioButton
+            android:id="@+id/data_view_zhugong"
+            android:background="@drawable/fragment_data_viewpage_rb"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/data_zhugong"
+            android:button="@null"
+            android:textColor="#fff"/>
+        <RadioButton
+            android:id="@+id/data_view_saicheng"
+            android:background="@drawable/fragment_data_viewpage_rb"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/data_shuaicheng"
+            android:button="@null"
+            android:textColor="#fff"/>
+  </RadioGroup>
+    <!--容器-->
+    <FrameLayout
+        android:id="@+id/data_fragment_viewpager_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        />
+    <ListView
+        android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="9"
+    android:id="@+id/listView_data_jifeng"
+    android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

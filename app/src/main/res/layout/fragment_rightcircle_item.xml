@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_circle_hottopicitem_head"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/avatar"
+            android:src="@drawable/ic_launcher"
+            android:onClick="clickButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="memberName"
+            android:textColor="#16AC3A"
+            android:id="@+id/textView_membername"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_toEndOf="@+id/avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布时间"
+            android:id="@+id/textView_createdtime"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_toEndOf="@+id/avatar" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圈名"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/textView_leaguename"
+            android:layout_alignBaseline="@id/textView_createdtime"
+            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/textView_createdtime"
+            android:layout_toRightOf="@+id/textView_createdtime"
+            android:layout_toEndOf="@+id/textView_createdtime" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:textStyle="bold"
+        android:id="@+id/textview_topictitle" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/textview_topiccontent" />
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image1"
+                android:src="@drawable/ic_launcher"
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image2"
+                android:src="@drawable/ic_launcher"
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                />
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image3"
+                android:src="@drawable/ic_launcher"
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                />
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="commentcount"
+            android:id="@+id/textView_commentcount"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feed_count_mark"
+            android:id="@+id/imageview_comment"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/textView_commentcount"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

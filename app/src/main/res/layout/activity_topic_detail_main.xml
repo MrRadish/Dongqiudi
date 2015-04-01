@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ds.dongqiudi.TopicDetailActivity"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="#16AC3A"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_btn_bg"
+            android:id="@+id/imageView_rightdetailback"
+            android:layout_centerVertical="true"
+            android:onClick="clickButton"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="懂球帝"
+            android:id="@+id/textView"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/defaultcovers"
+            android:id="@+id/imageView_rightdetailcirclethumb"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圈名"
+            android:textSize="20sp"
+            android:layout_marginTop="1dp"
+            android:id="@+id/textView_rightdetailtitle"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/imageView_rightdetailcirclethumb"
+            android:layout_toEndOf="@+id/imageView_rightdetailcirclethumb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有多少人加入"
+            android:id="@+id/textView_rightcircledescrible"
+            android:layout_below="@+id/textView_rightdetailtitle"
+            android:textColor="#666"
+            android:layout_marginLeft="3dp"
+
+            android:layout_alignBottom="@id/imageView_rightdetailcirclethumb"
+            android:layout_toRightOf="@+id/imageView_rightdetailcirclethumb"
+            android:layout_toEndOf="@+id/imageView_rightdetailcirclethumb" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_rightcircletocircle"
+            android:src="@drawable/arrow_right"
+            android:onClick="clickButton"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview_rightdetail_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <EditText
+            android:id="@+id/edittext_rightdetailedit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="没事写两句"
+            />
+        <ImageView
+            android:id="@+id/imageview_rightcirclecollect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clickButton"
+            android:src="@drawable/rightdetail_collect"
+            />
+        <ImageView
+            android:id="@+id/imageview_rightdetailshare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/rightdetail_share"
+            android:onClick="clickButton"
+            />
+        </LinearLayout>
+
+</LinearLayout>
