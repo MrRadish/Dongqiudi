@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.ds.entity.ArticleHead;
 import com.ds.entity.MainArticle;
+import com.ds.entity.SubjectArticle;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -65,6 +66,34 @@ public class JsonUtil {
             e.printStackTrace();
         }
 
+        return data;
+    }
+
+    /**
+     * 获取专题类文章
+     * @param jsonUrl
+     * @return
+     */
+    public static List<SubjectArticle> getData(String jsonUrl){
+        List<SubjectArticle> data=new ArrayList<>();
+        try {
+            JSONObject jsonObject=new JSONObject(jsonUrl);
+            JSONArray objs=jsonObject.getJSONArray("articles");
+            for(int i=0;i<objs.length();i++){
+                SubjectArticle article=new SubjectArticle();
+                article.setLable(jsonObject.getString("label"));
+                JSONObject obj= (JSONObject) objs.get(i);
+                article.setId(obj.getInt("id"));
+                article.setTitle(obj.getString("title"));
+                article.setDescription(obj.getString("description"));
+                article.setImgUrl(obj.getString("thumb"));
+                article.setPublishTime(obj.getString("published_at"));
+                article.setApi(obj.getString("api"));
+                data.add(article);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         return data;
     }
 

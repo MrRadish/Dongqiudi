@@ -20,7 +20,7 @@ public class BitmapHelper {
         //默认显示的图片
         bitmapUtils.configDefaultLoadingImage(R.drawable.message_pic_bg);
         //加载失败时显示的图片
-        bitmapUtils.configDefaultLoadFailedImage(R.drawable.icon_null);
+        bitmapUtils.configDefaultLoadFailedImage(R.drawable.product_fail);
         //图片显示的最大尺寸
         bitmapUtils.configDefaultBitmapMaxSize(80,80);
         //图片的缓存时间
