@@ -33,7 +33,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameDetailFragment_chat extends Fragment {
+public class chatGameDetailFragment extends Fragment {
     private String id;
     private RequestQueue mRequestQueue;
     private String chatRoomNameUrl;
@@ -48,7 +48,6 @@ public class GameDetailFragment_chat extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         id = getArguments().getString("id");
-        Log.i("Info",id);
         chatRoomNameUrl = Urls.chatRoom + id + "?type=match";
         mRequestQueue = Volley.newRequestQueue(getActivity());
     }
@@ -61,7 +60,6 @@ public class GameDetailFragment_chat extends Fragment {
         Chat_ListView = ((PullToRefreshListView) view.findViewById(R.id.Chat_ListView));
         Chat_ListView.setAdapter(adapter);
         Chat_ListView.setEmptyView(empty);
-        initjson();
         return view;
     }
 

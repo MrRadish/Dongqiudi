@@ -17,9 +17,6 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 import com.ds.adapter.Game_Field_ViewPagerAdapter;
 import com.ds.dongqiudi.R;
-import com.ds.fragment.GameDetailFragment_chat;
-import com.ds.fragment.GameDetailFragment_news;
-import com.ds.fragment.GameField;
 import com.ds.utils.MyBitmapCache;
 
 import java.util.ArrayList;
@@ -70,6 +67,8 @@ public class GameDetail_one extends ActionBarActivity implements
 
     public void init() {
         Bundle fragmentBundle = new Bundle();
+        fragmentBundle.putString("A",team_A_id);
+        fragmentBundle.putString("B",team_B_id);
         fragmentBundle.putString("id",match_id);
         //实例化RadioGroup并给予监听
         game_field_group = ((RadioGroup) findViewById(R.id.game_field_group));
@@ -78,12 +77,14 @@ public class GameDetail_one extends ActionBarActivity implements
         game_field_viewpager = ((ViewPager) findViewById(R.id.game_field_viewpager));
         game_field_viewpager.setOnPageChangeListener(this);
         //传递id给每一个fragment
-        Fragment chatFragment = new GameDetailFragment_chat();
+        Fragment chatFragment = new chatGameDetailFragment();
         chatFragment.setArguments(fragmentBundle);
         fragementList.add(chatFragment);
+        Fragment incidentFragment = new incidentGameDetailFragment();
+        incidentFragment.setArguments(fragmentBundle);
+        fragementList.add(incidentFragment);
         fragementList.add( new GameField());
-        fragementList.add( new GameField());
-        Fragment newsFragment = new GameDetailFragment_news();
+        Fragment newsFragment = new newsGameDetailFragment();
         newsFragment.setArguments(fragmentBundle);
         fragementList.add(newsFragment);
         fragementList.add( new GameField());
