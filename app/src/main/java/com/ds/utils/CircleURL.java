@@ -7,7 +7,7 @@ public class CircleURL {
     //圈子页的url
     public static String circleURL="https://api.dongqiudi.com/leagues/groups";
     //
-    public static String getCircleURL="https://api.dongqiudi.com/groups/id?page=";
+    public static String getCircleURL="https://api.dongqiudi.com/groups/";
 
     //热帖页的url
     public static String hotTopic="https://api.dongqiudi.com/recommend_topics?page=";

@@ -1,12 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    >
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/listview_leftcircle"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:id="@+id/scrollView"
+        android:layout_gravity="bottom" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="全部（74）"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#ccc"
+                />
+            <TextView
 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="兴趣"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_xingqu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="英超"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_yingchao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="西甲"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_xijia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="德甲"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_dejia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="意甲"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_yijia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="中超"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_zhongchao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="中甲"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_zhongjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="游戏"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_youxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="球员"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_qiuyuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="其他"
+                android:gravity="center"
+                />
+            <com.ds.view.MyGridView
+                android:id="@+id/gridview_qita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                />
+
+
+            </LinearLayout>
+        </ScrollView>
 </LinearLayout>

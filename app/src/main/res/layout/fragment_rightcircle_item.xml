@@ -13,8 +13,8 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/avatar"
             android:src="@drawable/ic_launcher"
             android:onClick="clickButton"
@@ -84,16 +84,16 @@
             android:layout_centerVertical="true"
             >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
                 android:id="@+id/image1"
                 android:src="@drawable/ic_launcher"
                 android:visibility="gone"
                 android:layout_margin="2dp"
                 />
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
                 android:id="@+id/image2"
                 android:src="@drawable/ic_launcher"
                 android:visibility="gone"
@@ -103,8 +103,8 @@
 
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
                 android:id="@+id/image3"
                 android:src="@drawable/ic_launcher"
                 android:visibility="gone"

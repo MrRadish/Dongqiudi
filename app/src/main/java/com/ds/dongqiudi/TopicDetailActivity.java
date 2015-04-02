@@ -1,5 +1,6 @@
 package com.ds.dongqiudi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -110,6 +111,8 @@ public class TopicDetailActivity extends ActionBarActivity implements PullToRefr
     //获取头部数据并给ListView设置头部
     private void getHeadData() {
         stringRequest=new StringRequest(CircleURL.toppicContent+id,new Response.Listener<String>() {
+
+
             @Override
             public void onResponse(String s) {
                 TopicDetailHeader header= JsonToList.jsonToTopicDetailHeader(s);
@@ -120,6 +123,8 @@ public class TopicDetailActivity extends ActionBarActivity implements PullToRefr
                     textview_Content.setText(header.getContent());
                     textview_CreatedAt.setText(header.getCreated_at());
                     textview_CommentCount.setText("总评论数("+header.getTotal_replies()+")");
+
+
 
                     League group = header.getGroup();
                     if (group!=null&&!"null".equals(group.getThumb())){
@@ -206,6 +211,7 @@ public class TopicDetailActivity extends ActionBarActivity implements PullToRefr
                 break;
             case R.id.imageView_rightcircletocircle:
                 //被点击后进入相应圈子的详情
+
                 break;
             //点击后收藏
             case R.id.imageview_rightcirclecollect:
