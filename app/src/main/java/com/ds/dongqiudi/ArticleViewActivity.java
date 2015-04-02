@@ -27,7 +27,7 @@ public class ArticleViewActivity extends ActionBarActivity implements View.OnCli
         setContentView(R.layout.activity_article_view);
         Bundle bundle=getIntent().getExtras().getBundle("url");
         shareUrl = bundle.getString("articleurl");
-        Toast.makeText(this,"ArticleActivity"+ shareUrl,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,shareUrl,Toast.LENGTH_SHORT).show();
         intiUI();
     }
     public void intiUI(){
