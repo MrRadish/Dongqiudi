@@ -19,6 +19,8 @@ public class CircleFragmentAdapter extends FragmentPagerAdapter {
 
         this.list = list;
 
+
+
     }
 
     @Override

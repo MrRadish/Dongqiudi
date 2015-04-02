@@ -68,6 +68,7 @@ public class CommentAdapter extends BaseAdapter{
             }
         }
         return view;
+
     }
 
     public static class ViewHolder{

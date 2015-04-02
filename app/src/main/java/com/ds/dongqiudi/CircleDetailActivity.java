@@ -104,6 +104,7 @@ public class CircleDetailActivity extends ActionBarActivity implements PullToRef
         curPage=1;
         totalList.clear();
         loadData();
+        
     }
 
     @Override

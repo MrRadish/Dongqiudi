@@ -13,6 +13,7 @@ public class TopicDetailHeader {
     private int total_replies;
     private int id;
 
+
     private League group;
     private Member author;
 

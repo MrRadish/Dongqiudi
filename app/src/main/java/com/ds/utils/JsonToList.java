@@ -22,6 +22,7 @@ import java.util.List;
  */
 public class JsonToList {
 
+
     //热帖页面的json解析
     public static List<HotTopic> hotTopicJsonToList(String jsonString){
         List<HotTopic>list=new ArrayList<>();

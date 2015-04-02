@@ -9,6 +9,7 @@ public class Attachment {
     private String thumb;    //缩略图地址
     private String url;     //原图地址
 
+
     public Attachment(){
 
     }

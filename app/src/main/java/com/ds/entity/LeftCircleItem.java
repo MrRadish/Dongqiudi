@@ -8,6 +8,7 @@ public class LeftCircleItem {
     private League league1;
     private League league2;
 
+
     public LeftCircleItem() {
     }
 

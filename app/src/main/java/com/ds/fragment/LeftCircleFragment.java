@@ -153,6 +153,7 @@ public class LeftCircleFragment extends Fragment implements AdapterView.OnItemCl
 
     }
 
+
     //配置数据源
     public void loadData(){
         stringRequest= new StringRequest(CircleURL.circleURL,new Response.Listener<String>() {

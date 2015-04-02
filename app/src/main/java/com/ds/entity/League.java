@@ -13,6 +13,7 @@ public class League {
     private int join_user_total;
     private int league_id;   //所在联盟的id值
 
+
     public int getLeague_id() {
         return league_id;
     }

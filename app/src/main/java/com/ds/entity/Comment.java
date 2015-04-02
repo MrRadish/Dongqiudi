@@ -4,6 +4,7 @@ package com.ds.entity;
  * Created by aaa on 15-3-31.
  */
 public class Comment {
+
     private String content;
     private int floor;
     private String created_at;

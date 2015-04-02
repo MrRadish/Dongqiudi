@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:text="圈子名称"
             />
+
         <ImageView
             android:id="@+id/imageview_leftcircle_memmbercount"
             android:layout_width="wrap_content"

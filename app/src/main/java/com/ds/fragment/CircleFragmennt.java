@@ -44,6 +44,7 @@ public class CircleFragmennt extends Fragment implements ViewPager.OnPageChangeL
         viewPager.setOnPageChangeListener(this);
 
         //给radiogroup设置改变监听器
+
         radioGroup_title.setOnCheckedChangeListener(this);
     }
 

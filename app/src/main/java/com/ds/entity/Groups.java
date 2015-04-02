@@ -16,6 +16,7 @@ public class Groups {
         this.id = id;
         this.list = list;
         this.name = name;
+
     }
 
     public int getId() {

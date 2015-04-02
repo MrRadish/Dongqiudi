@@ -10,6 +10,7 @@ public class Member {
     private String medal_id;
     private String avatar;        //头像
 
+
     public Member(){
 
     }

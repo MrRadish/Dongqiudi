@@ -18,6 +18,7 @@
             android:text="圈子"
             android:gravity="center"
             />
+
         <RadioButton
             style="@style/Circle_RadioButton"
             android:id="@+id/hot_topic_circlefragment"

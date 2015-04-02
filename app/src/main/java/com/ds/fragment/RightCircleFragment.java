@@ -43,7 +43,6 @@ public class RightCircleFragment extends Fragment implements PullToRefreshBase.O
 
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mQueue= Volley.newRequestQueue(getActivity());

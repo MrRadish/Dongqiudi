@@ -72,6 +72,7 @@ public class LeftCircleAdapter extends BaseAdapter{
         private TextView topicCount;
         private ImageView avatar;
 
+
         public ViewHolder(View view){
             leagueName= ((TextView) view.findViewById(R.id.textview_leftcircle_item_leaguename));
             memberCount= ((TextView) view.findViewById(R.id.textview_leftcircle_item_membercount));

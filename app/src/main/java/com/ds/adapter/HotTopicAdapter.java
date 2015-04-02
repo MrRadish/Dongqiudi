@@ -69,6 +69,7 @@ public class HotTopicAdapter extends BaseAdapter{
             mHolder.commentCount.setText(""+hotTopic.getTotal_replies());
 
             String avatarString = author.getAvatar();
+
             if ("null".equals(avatarString)) {
                 mHolder.avatar.setImageResource(R.drawable.defaultcovers);
             }else{

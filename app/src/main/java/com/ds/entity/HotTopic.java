@@ -17,6 +17,7 @@ public class HotTopic {
     private String title;      //标题
     private int total_replies;  //总回复数
 
+
     public int getTotal_replies() {
         return total_replies;
     }

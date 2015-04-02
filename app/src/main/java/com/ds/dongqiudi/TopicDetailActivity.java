@@ -189,6 +189,7 @@ public class TopicDetailActivity extends ActionBarActivity implements PullToRefr
                 if (list != null) {
                     totalList.addAll(list);
                     //提醒listview更新
+
                     adapter.notifyDataSetChanged();
                     listview.onRefreshComplete();
                 }
