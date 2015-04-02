@@ -83,6 +83,12 @@
     <string name="data_before">上一轮</string>
     <string name="data_next">下一轮</string>
     <string name="data_ranking">第0轮</string>
-    <string name="title_activity_data_team">DataTeamActivity</string>
+    <string name="team_watch">+关注</string>
+    <string name="team_dongtai">动态</string>
+    <string name="team_saicheng">赛程</string>
+    <string name="team_ziliao">资料</string>
+
+
+    <string name="title_activity_data_team">TeamActivity</string>
     <string name="title_activity_member">MemberActivity</string>
 </resources>

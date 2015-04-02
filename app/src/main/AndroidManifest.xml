@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ds.dongqiudi" >
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
@@ -37,8 +36,17 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
         </activity>
-        <activity android:name=".MemberActivity"/>
 
+        <activity android:name=".MemberActivity"
+            android:label="@string/title_activity_member"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
+            </activity>
+        <activity android:name=".TeamActivity"
+            android:label="@string/title_activity_data_team"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
+        </activity>
         <activity android:name="cn.sharesdk.framework.ShareSDKUIShell"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
                   android:windowSoftInputMode="stateHidden|adjustResize"
@@ -51,5 +59,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
