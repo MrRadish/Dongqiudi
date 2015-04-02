@@ -9,7 +9,7 @@
     <string name="btm_game">比赛</string>
     <string name="btm_people">圈子</string>
     <string name="btm_data">数据</string>
-    <!---->
+    <!--  -->
     <string-array name="game_detail_title">
         <item>聊天</item>
         <item>事件</item>
@@ -85,4 +85,6 @@
     <string name="data_ranking">第0轮</string>
     <string name="title_activity_data_team">DataTeamActivity</string>
     <string name="title_activity_member">MemberActivity</string>
+    <string name="title_activity_talk_about_football">TalkAboutFootballActivity</string>
+
 </resources>

@@ -70,15 +70,10 @@ public class HotTopicAdapter extends BaseAdapter{
 
             String avatarString = author.getAvatar();
             if ("null".equals(avatarString)) {
-                LinearLayout.LayoutParams linearParams = (LinearLayout.LayoutParams) mHolder.avatar.getLayoutParams(); // 取控件mGrid当前的布局参数
-                linearParams.height = 120;                    // 当控件的高强制设成50象素
-                linearParams.width=120;
-                mHolder.avatar.setLayoutParams(linearParams); // 使设置好的布局参数应用到控件上
-
                 mHolder.avatar.setImageResource(R.drawable.defaultcovers);
             }else{
                 mLoader.get(avatarString, mLoader.getImageListener(mHolder.avatar,
-                        R.drawable.product_fail, R.drawable.defaultcovers), 120, 120);
+                        R.drawable.team_icon_null, R.drawable.team_icon_null));
                 if(hotTopic.getAttachments_total()>0) {
                     List<Attachment> attachments = hotTopic.getAttachments();
                     for (int j = 0; j < attachments.size(); j++) {
@@ -87,14 +82,15 @@ public class HotTopicAdapter extends BaseAdapter{
                         if(j==0) {
                             mHolder.image1.setVisibility(View.VISIBLE);
                             mLoader.get(thumb, mLoader.getImageListener(mHolder.image1,
-                                    R.drawable.product_fail, R.drawable.defaultcovers), 280, 300);
+                                    R.drawable.team_icon_null, R.drawable.team_icon_null));
                         }else if(j==1){
                             mHolder.image2.setVisibility(View.VISIBLE);
                             mLoader.get(thumb, mLoader.getImageListener(mHolder.image2,
-                                    R.drawable.product_fail, R.drawable.defaultcovers), 280, 300);
-                        }else if(j==2){
+                                    R.drawable.team_icon_null, R.drawable.team_icon_null));
+                        }
+                        else if(j==2){
                             mLoader.get(thumb, mLoader.getImageListener(mHolder.image3,
-                                    R.drawable.product_fail, R.drawable.defaultcovers), 280, 300);
+                                    R.drawable.team_icon_null, R.drawable.team_icon_null), 0, 0);
                             mHolder.image3.setVisibility(View.VISIBLE);
                         }
                     }

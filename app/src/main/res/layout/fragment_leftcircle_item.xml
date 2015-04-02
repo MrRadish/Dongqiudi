@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
-    android:background="@drawable/app_bg"
+
     >
-    <TextView
-        android:id="@+id/textview_leftcircle_item_groupname"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#fff"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageview_leftcircle_thumb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="联盟名字"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_launcher"
         />
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include
-            android:id="@+id/layout_left"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/textview_leftcircle_item_leaguename"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-
-            layout="@layout/fragment_leftcircle_item_detail1"
+            android:text="圈子名称"
             />
-        <include
-            android:id="@+id/layout_right"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <ImageView
+            android:id="@+id/imageview_leftcircle_memmbercount"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/fragment_leftcircle_item_detail2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_below="@id/textview_leftcircle_item_leaguename"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/visitor_circle"
             />
+        <TextView
+            android:id="@+id/textview_leftcircle_item_membercount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成员人数"
+            android:layout_toRightOf="@id/imageview_leftcircle_memmbercount"
+            android:layout_below="@id/textview_leftcircle_item_leaguename"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            />
+        <ImageView
+            android:id="@+id/imageview_leftcircle_topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/editor_circle"
+            android:layout_below="@id/imageview_leftcircle_memmbercount"
+            android:layout_marginTop="2dp"
+            />
+        <TextView
+            android:id="@+id/textview_leftcircle_item_topicscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论数"
+            android:layout_toRightOf="@id/imageview_leftcircle_topics"
+            android:layout_below="@id/textview_leftcircle_item_membercount"
+            android:layout_marginTop="2dp"
+            />
+    </RelativeLayout>
 
-        </LinearLayout>
+
+</LinearLayout>
+
 
 </LinearLayout>
