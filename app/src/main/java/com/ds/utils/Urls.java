@@ -9,6 +9,7 @@ import java.util.Date;
  * Created by aaa on 15-3-31.
  */
 public class Urls {
+    public static String incident = "https://data.dongqiudi.com/soccerDataAPI/interface/getMatchEventNew.php?matchID="; //后缀：?matchID=1973973
     public static String news = "https://data.dongqiudi.com/soccerDataAPI/interface/getMatchVideo.php?matchID="; //后缀：?matchID=1973973
     public static String attention = "http://b.data.dongqiudi.com/soccerDataAPI/interface/getZuCaiMatchlistByDate.php?start=";
     public static  String main = "http://b.data.dongqiudi.com/soccerDataAPI/interface/getZuCaiMatchlistByDate.php?start=";

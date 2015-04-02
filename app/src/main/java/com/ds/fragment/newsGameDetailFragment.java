@@ -26,7 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class GameDetailFragment_news extends Fragment {
+public class newsGameDetailFragment extends Fragment {
     private WebView main_fragment_newsWebView;
     private String match_id;
     private String url;

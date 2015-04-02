@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.ds.fragment.incidentGameDetailFragment">
+
+<ScrollView
+    android:id="@+id/incident_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="9">
+
+    <ListView
+        android:id="@+id/incident_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/incident_RelativeLayout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/incident_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/incident_bg"/>
+
+        <LinearLayout
+            android:id="@+id/incident_bottom_context"
+            android:layout_centerInParent="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                style="@style/GameIncident_bottomLayout">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/g"/>
+                <TextView
+                    style="@style/GameIncident_bottomText"
+                    android:text="@string/incident_goal"/>
+                </LinearLayout>
+            <LinearLayout
+                style="@style/GameIncident_bottomLayout">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/pg"/>
+                <TextView
+                    style="@style/GameIncident_bottomText"
+                    android:text="@string/incident_point"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/GameIncident_bottomLayout">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/pm"/>
+                <TextView
+                    style="@style/GameIncident_bottomText"
+                    android:text="@string/incident_abortive"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/GameIncident_bottomLayout">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/og"/>
+                <TextView
+                    style="@style/GameIncident_bottomText"
+                    android:text="@string/incident_own"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/GameIncident_bottomLayout">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/as"/>
+                <TextView
+                    style="@style/GameIncident_bottomText"
+                    android:text="@string/incident_attack"/>
+            </LinearLayout>
+
+            </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
