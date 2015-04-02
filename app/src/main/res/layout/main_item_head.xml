@@ -20,31 +20,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main_list_head_rd_bg"
-
+            android:button="@null"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main_list_head_rd_bg"
-
+            android:button="@null"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:button="@null"
             android:background="@drawable/main_list_head_rd_bg"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main_list_head_rd_bg"
-
+            android:button="@null"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main_list_head_rd_bg"
-
+            android:button="@null"
             />
 
     </RadioGroup>
