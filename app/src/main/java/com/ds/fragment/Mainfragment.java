@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +13,6 @@ import android.widget.RadioGroup;
 
 import com.ds.adapter.MainFragmentViewPagerAdapter;
 import com.ds.dongqiudi.R;
-import com.ds.utils.MainHttpUrls;
-import com.ds.view.MyViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +51,7 @@ public class Mainfragment extends Fragment implements RadioGroup.OnCheckedChange
               fragments.add(new DumFragmentA());
             }
             else if(i==4){
-                fragments.add(new TopicFragment());
+                fragments.add(new SubjectFragment());
             }
             else {
               fragments.add(new DumFragmentB());

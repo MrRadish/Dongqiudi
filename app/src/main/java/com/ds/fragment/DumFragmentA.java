@@ -61,6 +61,7 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
     private List<ArticleHead> heads;
     private MainlistHaedadapter headadapter;
     private String url;
+    private String nextUrl;
     private TextView txtnull;
 
 
@@ -106,6 +107,7 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
         //加载自定义控件
         v= inflater.inflate(R.layout.main_item_head, null);
         listView.addHeaderView(v);
+
         //获取头部viewpager
         headViewpager = ((MyViewPager) v.findViewById(R.id.main_list_head_viewpager));
         group = ((RadioGroup) v.findViewById(R.id.main_list_head_item_rdgroup));
@@ -136,10 +138,7 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
                     JSONObject jsonObject = new JSONObject(info.result);
                     String prev = jsonObject.getString("prev");
                     if (prev != null) {
-                        head.setHeadUrl(prev);
-                        heads.add(head);
-                        //下载头部json数据
-                        getHead(heads.get(0).getHeadUrl());
+                       getHead(prev);
                     }
                     JSONArray objs = jsonObject.getJSONArray("articles");
                     for (int i = 0; i < objs.length(); i++) {
@@ -187,7 +186,6 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
             @Override
             public void onFailure(HttpException e, String s) {
                 Toast.makeText(getActivity(), "加载失败，网络问题", Toast.LENGTH_SHORT).show();
-                Toast.makeText(getActivity(), "加载失败，网络问题", Toast.LENGTH_SHORT).show();
                 refresh.setVisibility(View.GONE);
                 txtnull.setVisibility(View.VISIBLE);
             }
@@ -195,6 +193,7 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
 
 
     }
+
     //https://api.dongqiudi.com/tabs/2/android/1.json?before=1427687417
     /**
      * 下载头部json数据
@@ -219,10 +218,12 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
                             head.setLabelColor(obj.optString("label_color"));
                             head.setArticle(obj.getString("url"));
                             MainListHeadFragment fragment = new MainListHeadFragment();
-                            Bundle bundle = new Bundle();
-                            bundle.putSerializable("entity", head);
-                            fragment.setArguments(bundle);
+//                            Bundle bundle = new Bundle();
+//                            bundle.putSerializable("entity", head);
+//                            fragment.setArguments(bundle);
                             fragments.add(fragment);
+                            heads.add(head);
+                            }
 //                            Log.d("fragments-------------", head.toString());
 //                            try {
 //                                //缓存头部
@@ -230,9 +231,8 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
 //                            } catch (DbException e) {
 //                                e.printStackTrace();
 //                            }
-                        }
 
-                        headadapter = new MainlistHaedadapter(getChildFragmentManager(), fragments);
+                        headadapter = new MainlistHaedadapter(getChildFragmentManager(), fragments,heads);
                         if(headViewpager!=null){
                             headViewpager.setAdapter(headadapter);
                             headViewpager.setOnPageChangeListener(DumFragmentA.this);
@@ -347,7 +347,7 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                data.clear();
+//                data.clear();
                 getData(url);
                 adapter.addAll(data);
                 refresh.onRefreshComplete();
@@ -364,8 +364,11 @@ public class DumFragmentA extends Fragment implements PullToRefreshBase.OnRefres
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(data.size()>0&&data!=null){
-                    getData(data.get(0).getNextUrl());
+
+                if(data!=null&&data.size()>0){
+                    String nextUrl=data.get(0).getNextUrl().toString();
+                    data.clear();
+                    getData(nextUrl);
 //                    Log.d("next--------------",data.toString());
                     adapter.addAll(data);
                     refresh.onRefreshComplete();

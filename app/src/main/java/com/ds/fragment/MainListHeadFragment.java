@@ -41,7 +41,7 @@ public class MainListHeadFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         head = (ArticleHead) getArguments().getSerializable("entity");
-        Log.d("HeadFragment---------------------",head.toString());
+//        Log.d("HeadFragment---------------------",head.toString());
     }
 
     @Override
@@ -77,6 +77,7 @@ public class MainListHeadFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        head = (ArticleHead) getArguments().getSerializable("entity");
     }
 
     @Override
@@ -88,4 +89,5 @@ public class MainListHeadFragment extends Fragment {
     public void onStop() {
         super.onStop();
     }
+
 }

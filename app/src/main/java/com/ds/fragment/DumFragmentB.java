@@ -1,6 +1,7 @@
 package com.ds.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -9,9 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.ds.adapter.MainRefreshAdapter;
+import com.ds.dongqiudi.ArticleViewActivity;
 import com.ds.dongqiudi.R;
 import com.ds.entity.MainArticle;
 import com.ds.utils.JsonUtil;
@@ -29,7 +32,7 @@ import java.util.List;
  * 首页,第三到最后的fragment
  * Created by Administrator on 2015/3/25.
  */
-public class DumFragmentB extends Fragment implements PullToRefreshBase.OnRefreshListener2{
+public class DumFragmentB extends Fragment implements PullToRefreshBase.OnRefreshListener2, AdapterView.OnItemClickListener {
     private PullToRefreshListView refresh;
     private String url;
     private List<MainArticle> data;
@@ -66,7 +69,7 @@ public class DumFragmentB extends Fragment implements PullToRefreshBase.OnRefres
         refresh.setMode(PullToRefreshBase.Mode.BOTH);
         refresh.setOnRefreshListener(this);
         refresh.setAdapter(adapter);
-
+        refresh.setOnItemClickListener(this);
         return view;
     }
     //下载json数据
@@ -81,7 +84,7 @@ public class DumFragmentB extends Fragment implements PullToRefreshBase.OnRefres
 
             @Override
             public void onSuccess(ResponseInfo<String> info) {
-                Log.d("下载json数据",info.result);
+//                Toast.makeText(getActivity(), "数据"+info.result, Toast.LENGTH_SHORT).show();
                 data.addAll(JsonUtil.getMainJson(info.result));
                 adapter.addAll(data);
             }
@@ -130,5 +133,16 @@ public class DumFragmentB extends Fragment implements PullToRefreshBase.OnRefres
             }
         },2000);
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Intent intent=new Intent(getActivity(), ArticleViewActivity.class);
+        if(data!=null&&data.size()>0){
+            Bundle bundle=new Bundle();
+            bundle.putString("articleurl",data.get(i).getArticleUrl());
+            intent.putExtra("url",bundle);
+            startActivity(intent);
+        }
     }
 }
