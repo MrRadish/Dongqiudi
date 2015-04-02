@@ -5,10 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.ds.fragment.CollectionFragment;
 import com.ds.fragment.DumFragmentA;
 import com.ds.fragment.DumFragmentB;
-import com.ds.fragment.TopicFragment;
+import com.ds.fragment.SubjectFragment;
 import com.ds.utils.MainHttpUrls;
 
 import java.util.List;
@@ -58,7 +57,7 @@ public class MainFragmentViewPagerAdapter extends FragmentPagerAdapter {
                 dgB2.setArguments(bundle3);
                 break;
             case 4:
-                TopicFragment dgB3 = (TopicFragment) list.get(4);
+                SubjectFragment dgB3 = (SubjectFragment) list.get(4);
                 url= MainHttpUrls.SUBJECT_URL;
                 Bundle bundle4=new Bundle();
                 bundle4.putString("url",url);
@@ -101,42 +100,42 @@ public class MainFragmentViewPagerAdapter extends FragmentPagerAdapter {
                 break;
             case 10:
                 DumFragmentB dgB9 = (DumFragmentB) list.get(10);
-                url= MainHttpUrls.YIJIA_URL;
+                url= MainHttpUrls.YINGCHAO_URL;
                 Bundle bundle10=new Bundle();
                 bundle10.putString("url",url);
                 dgB9.setArguments(bundle10);
                 break;
             case 11:
                 DumFragmentB dgB10 = (DumFragmentB) list.get(11);
-                url= MainHttpUrls.XIJIA_URL;
+                url= MainHttpUrls.YIJIA_URL;
                 Bundle bundle11=new Bundle();
                 bundle11.putString("url",url);
                 dgB10.setArguments(bundle11);
                 break;
             case 12:
                 DumFragmentB dgB11 = (DumFragmentB) list.get(12);
-                url= MainHttpUrls.DEJIA_URL;
+                url= MainHttpUrls.XIJIA_URL;
                 Bundle bundle12=new Bundle();
                 bundle12.putString("url",url);
                 dgB11.setArguments(bundle12);
                 break;
             case 13:
                 DumFragmentB dgB12 = (DumFragmentB) list.get(13);
-                url= MainHttpUrls.WUZHOU_URL;
+                url= MainHttpUrls.DEJIA_URL;
                 Bundle bundle13=new Bundle();
                 bundle13.putString("url",url);
                 dgB12.setArguments(bundle13);
                 break;
             case 14:
                 DumFragmentB dgB13 = (DumFragmentB) list.get(14);
-                url= MainHttpUrls.ZHUANHUI_URL;
+                url= MainHttpUrls.WUZHOU_URL;
                 Bundle bundle14=new Bundle();
                 bundle14.putString("url",url);
                 dgB13.setArguments(bundle14);
                 break;
             case 15:
                 DumFragmentB dgB14 = (DumFragmentB) list.get(15);
-                url= MainHttpUrls.TOPIC_URL;
+                url= MainHttpUrls.ZHUANHUI_URL;
                 Bundle bundle15=new Bundle();
                 bundle15.putString("url",url);
                 dgB14.setArguments(bundle15);
