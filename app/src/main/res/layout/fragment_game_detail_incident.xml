@@ -3,23 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.ds.fragment.incidentGameDetailFragment">
 
-<ScrollView
-    android:id="@+id/incident_ScrollView"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="9">
-
     <ListView
         android:id="@+id/incident_ListView"
+        android:layout_weight="12"
+        android:divider="@null"
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-
-    </ScrollView>
+        android:layout_height="0dp"></ListView>
 
     <RelativeLayout
         android:id="@+id/incident_RelativeLayout"
-        android:layout_weight="1"
         android:layout_width="match_parent"
+        android:layout_weight="1"
         android:layout_height="0dp">
 
         <ImageView
@@ -30,13 +25,14 @@
 
         <LinearLayout
             android:id="@+id/incident_bottom_context"
-            android:layout_centerInParent="true"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
 
             <LinearLayout
                 style="@style/GameIncident_bottomLayout">
