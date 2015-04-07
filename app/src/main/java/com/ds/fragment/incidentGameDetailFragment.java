@@ -1,10 +1,10 @@
 package com.ds.fragment;
 
-import android.app.Activity;
-import android.net.Uri;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,41 +40,53 @@ public class incidentGameDetailFragment extends Fragment {
     private List<Events> eventsList = new ArrayList<>();
     private Game_EventAdapter adapter;
     private String url;
-    private Events myEvent;
+    private String A;
+    private float scale;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         match_id = getArguments().getString("id");
+        A = getArguments().getString("A");
         url = Urls.incident + match_id;
         mRequestQueue = Volley.newRequestQueue(getActivity());
+
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game_detail_incident,container,false);
-        adapter = new Game_EventAdapter(getActivity(),eventsList);
+        adapter = new Game_EventAdapter(getActivity(),eventsList,A);
         View empty = LayoutInflater.from(getActivity()).inflate(R.layout.mylistview_empty,null,false);
         incident_ListView = ((ListView) view.findViewById(R.id.incident_ListView));
         incident_ListView.setEmptyView(empty);
         incident_ListView.setAdapter(adapter);
+        incident_ListView.setDividerHeight(0);
         initJson();
         return view;
     }
 
     public void initJson(){
+        Log.i("Info","网址："+url);
         JsonObjectRequest mJsonRequest = new JsonObjectRequest(url,null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         try {
+                            Events myEvent = null;
                             JSONArray events = jsonObject.getJSONArray("events");
                             for (int i = 0;i<events.length();i++) {
                                 JSONObject Eventsjson = events.getJSONObject(i);
                                 Incident incident = null;
+                                Log.i("Info",mintes+"这里是时间哦");
                                 if (!Eventsjson.getString("minute").equals(mintes)){
+                                    if (myEvent!=null){
+                                        Log.i("Info",myEvent.getMinute()+"得到的时间在这里");
+                                        eventsList.add(myEvent);
+                                    }
                                     incident = new Incident();
                                     myEvent = new Events();
+                                    myEvent.setTeam_id(Eventsjson.getString("team_id"));
                                     JSONObject evena = Eventsjson.optJSONObject("eventA");
                                     incident.setCode(evena.getString("code"));
                                     incident.setPerson(evena.getString("person"));
@@ -90,7 +102,9 @@ public class incidentGameDetailFragment extends Fragment {
                                     }
                                         mintes = Eventsjson.getString("minute");
                                         myEvent.setMinute(mintes);
+                                    if (i == events.length() - 1){
                                         eventsList.add(myEvent);
+                                    }
                                 }else {
                                     incident = new Incident();
                                     JSONObject evena = Eventsjson.optJSONObject("eventA");
@@ -106,13 +120,14 @@ public class incidentGameDetailFragment extends Fragment {
                                         incident.setPerson_id(evenb.getString("person_id"));
                                         myEvent.addlist(incident);
                                     }
-                                    myEvent.setMinute(mintes);
-                                    eventsList.add(myEvent);
+                                      if (i == events.length() - 1){
+                                          eventsList.add(myEvent);
+                                      }
+//                                    eventsList.add(myEvent);
                                 }
 
                             }
                             adapter.notifyDataSetChanged();
-                            Log.i("Info",eventsList.size()+""+"大约有这么多");
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -124,6 +139,12 @@ public class incidentGameDetailFragment extends Fragment {
             }
         });
         mRequestQueue.add(mJsonRequest);
+
+    }
+
+    public int Dp2Px(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
     }
 
 }

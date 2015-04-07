@@ -9,6 +9,7 @@ import java.util.List;
 public class Events {
     private List<Incident> incidentList = new ArrayList<>();
     private String minute;
+    private String team_id;
 
     public Events() {
     }
@@ -31,5 +32,13 @@ public class Events {
 
     public List<Incident> getlist(){
         return incidentList;
+    }
+
+    public void setTeam_id(String team_id){
+        this.team_id = team_id;
+    }
+
+    public String getTeam_id(){
+        return team_id;
     }
 }
