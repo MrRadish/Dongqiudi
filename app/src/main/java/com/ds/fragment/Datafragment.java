@@ -78,25 +78,14 @@ public class Datafragment extends Fragment implements RadioGroup.OnCheckedChange
         switch (i) {
             case R.id.data_rb_1:
                 viewPager_data.setCurrentItem(0);
-//                DataViewpagerfragment item = (DataViewpagerfragment) fragmentList.get(0);
-//                Bundle bundle = new Bundle();
-//                bundle.putInt("id", 0);
-//                item.setArguments(bundle);
 
                 break;
             case R.id.data_rb_2:
-//                DataViewpagerfragment item1= (DataViewpagerfragment) fragmentList.get(0);
-//                Bundle bundle1 = new Bundle();
-//                bundle1.putInt("id", 1);
-//                item1.setArguments(bundle1);
+
                 viewPager_data.setCurrentItem(1);
 
                 break;
             case R.id.data_rb_3:
-//                DataViewpagerfragment item2= (DataViewpagerfragment) fragmentList.get(0);
-//                Bundle bundle2 = new Bundle();
-//                bundle2.putInt("id", 2);
-//                item2.setArguments(bundle2);
                 viewPager_data.setCurrentItem(2);
                 break;
             case R.id.data_rb_4:
